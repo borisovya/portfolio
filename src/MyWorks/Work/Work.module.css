@@ -1,0 +1,40 @@
+.work {
+
+    background-color: darkgrey;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blockWithButton {
+height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic {
+    border: 1px solid;
+    height: 50px;
+    width: 150px;
+}
+
+.descriptionBlock {
+
+    background-color: #c09a9a;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.title {
+    border: 1px solid;
+}
+
+.description {
+background-color: #ffd4f0;
+    border: 1px solid;
+}

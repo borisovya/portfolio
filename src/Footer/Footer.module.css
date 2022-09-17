@@ -1,0 +1,27 @@
+.footer {
+    height: 40vh;
+    background-color: #8cb08c;
+}
+
+.footerContainer {
+display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerBlock {
+    width: 80%;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerBlockContent {
+    background-color: darkgrey;
+    width: 100px;
+    height: 100px;
+}
+
+
+
