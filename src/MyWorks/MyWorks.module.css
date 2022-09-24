@@ -1,10 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 .myWorksBlock {
-    height: 100vh;
+    min-height: 40vh;
     background-color: #9884ad;
-    /*border: 1px solid;*/
-    /*width: 300px;*/
-    /*display: flex;*/
-    /*justify-content: space-between;*/
+
 }
 
 .worksContainer {
@@ -18,7 +19,6 @@
 }
 
 .works {
-
     border: 1px solid;
     width: 100%;
     display: flex;

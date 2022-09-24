@@ -7,10 +7,10 @@ function RemoteWork() {
     return (
         <div className={s.remoteWorkBlock}>
             <div className={`${styleContainer.container} ${s.remoteBlockContainer}`}>
-                <div className={s.remoteBlock}>
+
                     <h3>Рассматриваю варианты удаленной работы.</h3>
                     <div><button>Нанять меня</button></div>
-                </div>
+
             </div>
         </div>
     );

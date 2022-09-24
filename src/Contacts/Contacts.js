@@ -6,7 +6,7 @@ function Contacts() {
     return (
         <div className={s.contacts}>
             <div className={`${styleContainer.container} ${s.contactsContainer}`} >
-                <div className={s.contactsBlock}>
+
                     <h3>Contacts</h3>
                     <form className={s.form}>
                         <input/>
@@ -14,7 +14,7 @@ function Contacts() {
                         <textarea/>
                     </form>
                     <button>Send</button>
-                </div>
+
             </div>
         </div>
     );

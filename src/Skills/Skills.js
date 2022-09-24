@@ -12,6 +12,8 @@ function Skills() {
                 <div className={s.skills}>
                     <Skill title={'JS'} description={'Some information regarding JS skills...'} />
                     <Skill title={'HTML' } description={'Some information regarding HTML skills...'} />
+                    <Skill title={'TypeScript'} description={'Some information regarding CSS skills...'} />
+                    <Skill title={'React-Redux'} description={'Some information regarding CSS skills...'} />
                     <Skill title={'CSS'} description={'Some information regarding CSS skills...'} />
                 </div>
             </div>

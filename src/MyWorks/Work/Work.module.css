@@ -1,4 +1,8 @@
-.work {
+* {
+    box-sizing: border-box;
+}
+
+.workContainer {
 
     background-color: darkgrey;
     width: 320px;
@@ -7,19 +11,27 @@
     align-items: center;
 }
 
-.blockWithButton {
-height: 200px;
+.imgContainer {
+    width: 100%;
+    height: 150px;
+    background-color: hotpink;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXPfnIvxJIn0-GjeSgq0NzzDrk4LPRbfy0gw&usqp=CAU");
+    background-size: cover;
+    background-position: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.pic {
+
+.moreDetailsBlock {
+    background-color: yellow;
     border: 1px solid;
-    height: 50px;
-    width: 150px;
+    text-decoration: none;
+    padding: 5px;
 }
+
+
 
 .descriptionBlock {
 
@@ -27,14 +39,17 @@ height: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    width: 100%;
 }
 
 .title {
     border: 1px solid;
+    padding: 5px;
+    background-color: #99d0fb;
 }
 
 .description {
 background-color: #ffd4f0;
     border: 1px solid;
+    padding: 5px;
 }

@@ -12,6 +12,8 @@ function MyWorks() {
                 <div className={s.works}>
                     <Work title={'ToDo List'} description={'An interesting description is going to be here...'}/>
                     <Work title={'Some simple components'} description={'An interesting description is going to be here... Please wait a bit.'}/>
+                    <Work title={'Some simple components'} description={'An interesting description is going to be here... Please wait a bit.'}/>
+                    <Work title={'Some simple components'} description={'An interesting description is going to be here... Please wait a bit.'}/>
                 </div>
             </div>
         </div>

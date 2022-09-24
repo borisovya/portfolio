@@ -1,20 +1,15 @@
 .remoteWorkBlock {
-    height: 50vh;
+    height: 30vh;
     background-color: #eaeab6;
 }
 
 .remoteBlockContainer {
-justify-content: center;
-
-}
-
-.remoteBlock {
-    width: 80%;
-    height: 50%;
-    border: 1px solid;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    background-color: #eaeab6;
     text-align: center;
-    justify-content: space-around;
 }
+
+
 

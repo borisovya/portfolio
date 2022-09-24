@@ -1,6 +1,6 @@
 .footer {
-    height: 40vh;
-    background-color: #8cb08c;
+    min-height: 20vh;
+    background-color: #a6dca6;
 }
 
 .footerContainer {
@@ -11,16 +11,17 @@ display: flex;
 }
 
 .footerBlock {
-    width: 80%;
+    width: 280px;
     border: 1px solid;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footerBlockContent {
     background-color: darkgrey;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 
 
