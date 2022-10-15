@@ -24,3 +24,20 @@
     justify-content: space-around;
     background-color: darkgrey;
 }
+
+.form input,  .form textarea {
+    width: 100%;
+}
+
+.button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #eeeef5;
+}
+
+
+@media screen and (max-width: 500px) {
+    .form {
+        width: 100%
+    }
+}

@@ -4,12 +4,14 @@ import styleContainer from "../Common/Styles/Container.module.css";
 
 
 function RemoteWork() {
+
+
     return (
         <div className={s.remoteWorkBlock}>
             <div className={`${styleContainer.container} ${s.remoteBlockContainer}`}>
 
-                    <h3>Рассматриваю варианты удаленной работы.</h3>
-                    <div><button>Нанять меня</button></div>
+                    <h3>I am available for Freelance</h3>
+                    <div><button className={s.button}>Hire me</button></div>
 
             </div>
         </div>

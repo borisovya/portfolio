@@ -3,8 +3,8 @@
 }
 
 .skillsBlock {
-    min-height: 40vh;
-    background-color: #c7dcc7;
+    min-height: 60vh;
+    background-color: #212529;
 
 }
 
@@ -19,10 +19,18 @@
 }
 
 .skills {
-    border: 1px solid;
+    margin-top: 20px;
+    margin-bottom: 50px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
+}
+
+@media screen and (max-width: 629px) {
+    .skills {
+        justify-content: center;
+
+    }
 }
