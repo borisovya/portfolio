@@ -1,0 +1,18 @@
+@import "src/Common/Styles/sass/variables";
+@import "src/Common/Styles/sass/mixins";
+
+.navBar {
+    border: 1px solid;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    a {
+        text-decoration: none;
+        font-weight: 500;
+
+        @include text($descriptionText, 16px, 1.5);
+        &:hover {
+            color:#f9004d;
+        }
+    }
+}

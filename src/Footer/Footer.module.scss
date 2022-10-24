@@ -1,0 +1,40 @@
+@import "src/Common/Styles/sass/variables";
+@import "src/Common/Styles/sass/mixins";
+
+.footer {
+    min-height: 20vh;
+    background-color: $mainBackgroundColor;
+    .footerContainer {
+        & h3 {
+            font-weight: 400;
+            @include text($titleText, 20px, 1.2);
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .footerBlock {
+            width: 280px;
+            border: 1px solid;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: $blocksBackgroundColor;
+            box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px $blocksBackgroundColor;
+            .footerBlockContent {
+                background-color: darkgrey;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,19 +1,28 @@
 import React from "react";
-import s from './MainBlock.module.css'
+import s from './MainBlock.module.scss'
 import styleContainer from '../Common/Styles/Container.module.css'
+import picImg from "../assets/images/photo_2022-10-22_19-48-16.jpg";
 
 
 function MainBlock() {
+
+    const pic = {
+        backgroundImage: `url(${picImg})`,
+    };
+
     return (
         <div className={s.mainBlock}>
             <div className={styleContainer.container}>
-                <div className={s.greeting}>
-                    <span>Hi there</span>
-                    <h1>Vladimir Borisov</h1>
-                    <p>Front-end developer</p>
-                </div>
+                <h1 className={s.greeting}>
+                    <div className={s.welcome}>Welcome to my page</div>
+                    <div className={s.profession}>{`Hi, I'm `}
+                        <span className={s.name}>Vladimir Borisov</span>
+                    </div>
 
-                <div className={s.photo}></div>
+                    <div className={s.profession}>a Front-end developer</div>
+                </h1>
+
+                <div style={pic} className={s.photo}></div>
             </div>
         </div>
     );
