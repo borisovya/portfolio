@@ -2,32 +2,35 @@
 @import "src/Common/Styles/sass/mixins";
 
 .contacts {
-    height: 50vh;
+    height: 70vh;
     background-color: $mainBackgroundColor;
     .contactsContainer {
         width: 80%;
         border: 1px solid;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         & h3 {
             font-weight: 600;
             @include text($titleText, 20px, 1.2);
         };
         .form {
-            border: 1px solid;
-            border-radius: 5px;
-            min-height: 60%;
-            width: 50%;
+            input {
+                width: 70%;
+            }
+            //border: 1px solid;
+            //border-radius: 5px;
+            min-height: 80%;
+            width: 70%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            align-items: center;
             background-color: $blocksBackgroundColor;
             box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px $blocksBackgroundColor;
-            &textarea {
-                width: 100%;
-            }
+
+
             @media screen and (max-width: 500px) {
                     width: 100%
             }
@@ -36,6 +39,10 @@
             border-radius: 15px;
             padding: 10px 40px;
             background-color: #eeeef5;
+            &:hover {
+                background-color: $accentColor;
+                color: $primaryTextColor
+            }
         }
     }
 }
