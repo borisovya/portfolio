@@ -16,8 +16,17 @@
             @include text($titleText, 20px, 1.2);
         };
         .form {
+            label {
+                color: $primaryTextColor;
+            }
+            textarea {
+                color: $primaryTextColor;
+            }
             input {
-                width: 70%;
+                color: $primaryTextColor;
+            }
+            .textField {
+                min-width: 70%;
             }
             //border: 1px solid;
             //border-radius: 5px;
@@ -30,19 +39,21 @@
             background-color: $blocksBackgroundColor;
             box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px $blocksBackgroundColor;
 
-
+            .button {
+                width: 30%;
+                background-color: $primaryTextColor;
+                color: black;
+                border-radius: 15px;
+                padding: 10px 40px;
+                &:hover {
+                    background-color: $accentColor;
+                    color: $primaryTextColor
+                }
             @media screen and (max-width: 500px) {
                     width: 100%
             }
         }
-        .button {
-            border-radius: 15px;
-            padding: 10px 40px;
-            background-color: #eeeef5;
-            &:hover {
-                background-color: $accentColor;
-                color: $primaryTextColor
-            }
+
         }
     }
 }

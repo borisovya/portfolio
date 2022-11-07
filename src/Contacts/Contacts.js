@@ -39,9 +39,10 @@ const ContactForm = () => {
             {/*<textarea {...register("message")} />*/}
 
             <TextField className={s.textField} id="standard-basic" label="Email" variant="standard" {...register("email")} />
-            <TextField id="standard-basic" label="Number" variant="standard" {...register("number")} />
+            <TextField className={s.textField} id="standard-basic" label="Number" variant="standard" {...register("number")} />
 
             <TextField
+                className={s.textField}
                 id="standard-multiline-static"
                 label="Your message"
                 multiline
