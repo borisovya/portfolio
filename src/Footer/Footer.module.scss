@@ -15,16 +15,17 @@
         align-items: center;
         .footerBlock {
             width: 280px;
-            border: 1px solid;
+
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             flex-wrap: wrap;
             background-color: $blocksBackgroundColor;
             box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px $blocksBackgroundColor;
             .footerBlockContent {
-                background-color: darkgrey;
-                width: 60px;
-                height: 60px;
+                width: 40px;
+                height: 40px;
+                background-size: cover;
+                background-position: center;
             }
         }
     }

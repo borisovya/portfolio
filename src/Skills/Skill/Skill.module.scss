@@ -1,0 +1,37 @@
+@import "src/Common/Styles/sass/mixins";
+@import "src/Common/Styles/sass/variables";
+
+.skill {
+    margin-top: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+    & h3 {
+        color: #c4cfde;
+        font-weight: 600;
+        @include text($titleText, 20px, 1.2);
+        margin-bottom: 20px;
+    }
+    .icon {
+        height: 60px;
+        width: 60px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+    }
+    .description {
+        color: #c4cfde;
+        text-align: center;
+        @include text($descriptionText, 16px, 1.4);
+        margin-bottom: 22px;
+    }
+}
+
+
+
+
+
