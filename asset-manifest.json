@@ -1,19 +1,29 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.901c398b.css",
-    "main.js": "/portfolio/static/js/main.cddcc11b.js",
+    "main.css": "/portfolio/static/css/main.a30a82fa.css",
+    "main.js": "/portfolio/static/js/main.9872395f.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/js2.png": "/portfolio/static/media/js2.920e1fb60d9efc147c3e.png",
     "static/media/photo_2022-10-22_19-48-16.jpg": "/portfolio/static/media/photo_2022-10-22_19-48-16.0790612c1cd17b675362.jpg",
     "static/media/social2.png": "/portfolio/static/media/social2.f1e99ff9fce3e57e1896.png",
     "static/media/todo2.jpg": "/portfolio/static/media/todo2.ad21c95f81ab17740c38.jpg",
+    "static/media/css-icon.svg": "/portfolio/static/media/css-icon.dbd31fe14ec796185689723739441965.svg",
+    "static/media/React-icon.svg": "/portfolio/static/media/React-icon.98dee874741ee283456310eeefee2a42.svg",
+    "static/media/redux-icon.svg": "/portfolio/static/media/redux-icon.d81fad54282cfb5c2e14133ee4061ee0.svg",
+    "static/media/Typescript_logo_2020.svg": "/portfolio/static/media/Typescript_logo_2020.9ad81d2e09b9cd2265cdb1e55d83a709.svg",
+    "static/media/Telegram_logo.svg": "/portfolio/static/media/Telegram_logo.d524ce60a5271a2d84bbeb6759286b02.svg",
+    "static/media/HTML5_logo_and_wordmark.svg": "/portfolio/static/media/HTML5_logo_and_wordmark.115310285b7fd7194c7afea2c04ec0f7.svg",
+    "static/media/LinkedIn_icon.svg": "/portfolio/static/media/LinkedIn_icon.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
+    "static/media/git-icon.svg": "/portfolio/static/media/git-icon.c0ad6253313a0547812bfb9a9f0894d6.svg",
     "index.html": "/portfolio/index.html",
-    "main.901c398b.css.map": "/portfolio/static/css/main.901c398b.css.map",
-    "main.cddcc11b.js.map": "/portfolio/static/js/main.cddcc11b.js.map",
+    "static/media/js.svg": "/portfolio/static/media/js.c9f0a72ec86ab6de952b107f64e32cc9.svg",
+    "static/media/Facebook_F_icon.svg": "/portfolio/static/media/Facebook_F_icon.0889d0b223a7526ac3f883adff17ae01.svg",
+    "main.a30a82fa.css.map": "/portfolio/static/css/main.a30a82fa.css.map",
+    "main.9872395f.js.map": "/portfolio/static/js/main.9872395f.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.901c398b.css",
-    "static/js/main.cddcc11b.js"
+    "static/css/main.a30a82fa.css",
+    "static/js/main.9872395f.js"
   ]
 }
