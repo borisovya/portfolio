@@ -4,11 +4,9 @@
 .mainBlock {
     height: 100vh;
     background-color: $mainBackgroundColor;
-
     .greeting {
         width: 500px;
         .welcome{
-
             font-weight: 400;
             letter-spacing: 2px;
             @include text($descriptionText, 20px, 1.2);
@@ -19,7 +17,6 @@
             font-weight: 600;
             @include text($descriptionText, 40px, 1.2);
             color: $accentColor;
-
         };
         .profession {
             margin-top: 20px;
@@ -28,21 +25,32 @@
             color: #ffffff;;
         }
     };
-    .photo {
-        width: 300px;
-        height: 400px;
-        background-color: $blocksBackgroundColor;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px $blocksBackgroundColor;
-        border-radius: 5px;
-        //border-top-left-radius: 10px;
-        //border-top-right-radius: 10px;
+    .photoContainer{
         position: relative;
+        z-index: 1;
+        @media screen and (max-width: 1114px){
+            margin-top: 50px;
+        }
+        .photo {
+            width: 300px;
+            height: 400px;
+            background-color: $blocksBackgroundColor;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px $blocksBackgroundColor;
+            border-radius: 5px;
+            //border-top-left-radius: 10px;
+            //border-top-right-radius: 10px;
+            position: relative;
+            &:before {
+
+        }
+        }
     }
+
 }
 
 

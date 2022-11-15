@@ -1,0 +1,46 @@
+@import "src/Common/Styles/sass/variables";
+
+.btn{
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: $descriptionText;
+  border: none;
+  //text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  max-width: 190px;
+  width: 100%;
+  color: $primaryTextColor;
+  outline: none;
+  position: relative;
+  z-index: 0;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 5px;
+    background: $accentColor;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+  }
+  &:hover{
+    text-decoration: none;
+    color: $primaryTextColor;
+
+    &::after {
+      background: $accentColor;
+      border-radius: 10px;
+      width: 100%;
+      height: 110%;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

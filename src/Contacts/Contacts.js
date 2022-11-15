@@ -4,6 +4,7 @@ import styleContainer from "../Common/Styles/Container.module.css";
 import { useForm} from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import { styled } from '@mui/material/styles'
+import Button from "../Common/Components/Button/Button";
 
 
 
@@ -55,7 +56,8 @@ const ContactForm = () => {
                              rows={4}
                              variant="standard"
                              {...register("number")} />
-            <input className={s.button}  type="submit" value='Send'/>
+            {/*<input className={s.button}  type="submit" value='Send'/>*/}
+            <Button text={'Send message'} type="submit" value='Send'/>
         </form>
     );
 }

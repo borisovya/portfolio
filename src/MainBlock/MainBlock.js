@@ -21,8 +21,10 @@ function MainBlock() {
 
                     <div className={s.profession}>a Front-end developer</div>
                 </h1>
+                <div className={s.photoContainer}>
+                    <div style={pic} className={s.photo}></div>
+                </div>
 
-                <div style={pic} className={s.photo}></div>
             </div>
         </div>
     );
