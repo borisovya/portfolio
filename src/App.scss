@@ -1,0 +1,8 @@
+@import "src/Common/Styles/sass/variables";
+
+.App {
+    & > div:nth-of-type(2n) {
+        background-color: $blocksBackgroundColor;
+    }
+}
+
