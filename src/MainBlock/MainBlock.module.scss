@@ -4,6 +4,14 @@
 .mainBlock {
     height: 100vh;
     background-color: $mainBackgroundColor;
+    //.particles{
+    //    position: absolute;
+    //    top: 0;
+    //    left: 0;
+    //    bottom: 0;
+    //    right: 0;
+    //    opacity: 0.3;
+    //}
     .greeting {
         width: 500px;
         .welcome{
@@ -28,9 +36,10 @@
     .photoContainer{
         position: relative;
         z-index: 1;
-        @media screen and (max-width: 1114px){
-            margin-top: 50px;
-        }
+        @media screen and (min-width: 1050px){
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;}
         .photo {
             width: 300px;
             height: 400px;
@@ -46,7 +55,14 @@
             //border-top-right-radius: 10px;
             position: relative;
             &:before {
-
+                content: '';
+                position: absolute;
+                height: 110%;
+                width: 105%;
+                border: 5px solid $accentColor;
+                left: 15px;
+                top: -24px;
+                z-index: -1;
         }
         }
     }

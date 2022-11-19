@@ -6,21 +6,20 @@
 }
 
 .myWorksBlock {
-  min-height: 40vh;
+  min-height: 90vh;
   background-color: $mainBackgroundColor;
 
   .worksContainer {
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: flex-start;
-
     .works {
-
       width: 100%;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      margin-top: 20px;
       align-items: flex-start;
       @media screen and (max-width: 822px) {
         justify-content: center;

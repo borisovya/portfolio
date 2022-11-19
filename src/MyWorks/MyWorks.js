@@ -1,6 +1,6 @@
 import React from "react";
 import s from './MyWorks.module.scss'
-import styleContainer from "../Common/Styles/Container.module.css";
+import styleContainer from "../Common/Styles/Container.module.scss";
 import Work from "./Work/Work";
 import Title from "../Common/Components/Title/Title";
 import toDoImg from '../assets/images/todo2.jpg'
@@ -25,7 +25,7 @@ function MyWorks() {
     };
 
     return (
-        <div className={s.myWorksBlock}>
+        <div id='projects' className={s.myWorksBlock}>
 
             <div className={`${styleContainer.container} ${s.worksContainer}`}>
                 <Title text={'Projects'}/>
@@ -33,13 +33,13 @@ function MyWorks() {
 
                     <Work style={todoList}
                           title={'ToDo List'}
-                          description={'An interesting description is going to be here..................................An interesting description is going to be here.............................................................'}/>
+                          description={'This app can help you with your daily routine.'}/>
                     <Work style={socialNetwork}
                           title={'Social network'}
-                          description={'An interesting description is going to be here... Please wait a bit.'}/>
+                          description={'Punch social network. This is a social network example.'}/>
                     <Work style={simpleComponents}
-                          title={'Some simple components'}
-                          description={'An interesting description is going to be here... Please wait a bit.'}/>
+                          title={'Cards'}
+                          description={'Here you can learn something using cards.'}/>
 
                 </div>
             </div>

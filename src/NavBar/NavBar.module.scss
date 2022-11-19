@@ -6,14 +6,19 @@
     display: flex;
     justify-content: space-between;
     margin-right: 120px;
+    .link{
+        color:$primaryTextColor;
+    }
     a {
-
         text-decoration: none;
         font-weight: 500;
-
         @include text($descriptionText, 16px, 1.5);
         &:hover {
             color:#f9004d;
+            cursor: pointer;
         }
+    }
+    .active{
+        color:#f9004d
     }
 }
