@@ -14,11 +14,15 @@
     width: 500px;
 
     .welcome {
+      margin-top: 90px;
       font-weight: 400;
       letter-spacing: 2px;
       @include text($descriptionText, 20px, 1.2);
       margin-bottom: 30px;
       color: #ffffff;
+      @media (max-width: 1020px) {
+        margin-top: 90px;
+      }
     }
   ;
 
