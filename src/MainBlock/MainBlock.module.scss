@@ -2,71 +2,74 @@
 @import "src/Common/Styles/sass/mixins";
 
 .mainBlock {
-    height: 100vh;
-    background-color: $mainBackgroundColor;
-    //.particles{
-    //    position: absolute;
-    //    top: 0;
-    //    left: 0;
-    //    bottom: 0;
-    //    right: 0;
-    //    opacity: 0.3;
-    //}
-    .greeting {
-        width: 500px;
-        .welcome{
-            font-weight: 400;
-            letter-spacing: 2px;
-            @include text($descriptionText, 20px, 1.2);
-            margin-bottom: 30px;
-            color: #ffffff;
-        };
-        .name {
-            font-weight: 600;
-            @include text($descriptionText, 40px, 1.2);
-            color: $accentColor;
-        };
-        .profession {
-            margin-top: 20px;
-            font-weight: 600;
-            @include text($descriptionText, 40px, 1.2);
-            color: #ffffff;;
-        }
-    };
-    .photoContainer{
-        position: relative;
-        z-index: 1;
-        @media screen and (min-width: 1050px){
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;}
-        .photo {
-            width: 300px;
-            height: 400px;
-            background-color: $blocksBackgroundColor;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px $blocksBackgroundColor;
-            border-radius: 5px;
-            //border-top-left-radius: 10px;
-            //border-top-right-radius: 10px;
-            position: relative;
-            &:before {
-                content: '';
-                position: absolute;
-                height: 110%;
-                width: 105%;
-                border: 5px solid $accentColor;
-                left: 15px;
-                top: -24px;
-                z-index: -1;
-        }
-        }
-    }
+  min-height: 100vh;
+  background-color: $mainBackgroundColor;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 
+  .greeting {
+    width: 500px;
+
+    .welcome {
+      font-weight: 400;
+      letter-spacing: 2px;
+      @include text($descriptionText, 20px, 1.2);
+      margin-bottom: 30px;
+      color: #ffffff;
+    }
+  ;
+
+    .name {
+      font-weight: 600;
+      @include text($descriptionText, 40px, 1.2);
+      color: $accentColor;
+    }
+  ;
+
+    .profession {
+      margin-top: 20px;
+      font-weight: 600;
+      @include text($descriptionText, 40px, 1.2);
+      color: #ffffff;;
+    }
+  }
+;
+
+  .photoContainer {
+    position: relative;
+    z-index: 1;
+    .photo {
+      width: 300px;
+      height: 400px;
+      background-color: $blocksBackgroundColor;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px $blocksBackgroundColor;
+      border-radius: 5px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 110%;
+        width: 105%;
+        border: 5px solid $accentColor;
+        left: 15px;
+        top: -24px;
+        z-index: -1;
+      }
+    }
+    @media (max-width: 1020px) {
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+  }
 }
 
 

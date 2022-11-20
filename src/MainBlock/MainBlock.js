@@ -6,8 +6,6 @@ import Fade from 'react-reveal/Fade';
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-tilt'
 
-// import Particles from "react-particles-js";
-
 
 function MainBlock() {
 
@@ -15,21 +13,9 @@ function MainBlock() {
         backgroundImage: `url(${picImg})`,
     };
 
-    // const particlesOptions = {
-    //     "particles": {
-    //         "number": {
-    //             "value": 80,
-    //             "density": {
-    //                     "enable": true,
-    //                     "value_area": 800
-    //             }
-    //         },
-    //     },
-    // };
 
     return (
         <div id='main' className={s.mainBlock}>
-            {/*<Particles className={s.particles} options={particlesOptions}/>*/}
             <Fade bottom>
                 <div className={styleContainer.container}>
                     <h1 className={s.greeting}>

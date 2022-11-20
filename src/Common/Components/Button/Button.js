@@ -3,7 +3,7 @@ import s from './Button.module.scss'
 
 const Button = (props) => {
     return (
-        <a href='' className={s.btn}>{props.text}</a>
+        <a href={props.link} className={s.btn}>{props.text}</a>
     );
 };
 

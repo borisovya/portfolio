@@ -5,7 +5,9 @@
     width: 300px;
     display: flex;
     justify-content: space-between;
-    margin-right: 120px;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    margin-right: 70px;
     .link{
         color:$primaryTextColor;
     }
@@ -20,5 +22,8 @@
     }
     .active{
         color:#f9004d
+    }
+    @media screen and (max-width: 400px) {
+        display: none;
     }
 }

@@ -5,8 +5,6 @@ import { Link } from 'react-scroll'
 
 function NavBar() {
 
-
-
     return (
         <div className={s.navBar}>
             <Link

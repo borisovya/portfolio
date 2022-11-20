@@ -12,6 +12,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: nowrap;
         & h3 {
             font-weight: 600;
             @include text($titleText, 20px, 1.2);
@@ -48,7 +49,7 @@
                     background-color: $accentColor;
                     color: $primaryTextColor
                 }
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: 400px) {
                     width: 100%
             }
         }

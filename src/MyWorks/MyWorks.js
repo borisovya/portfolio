@@ -33,13 +33,19 @@ function MyWorks() {
 
                     <Work style={todoList}
                           title={'ToDo List'}
-                          description={'This app can help you with your daily routine.'}/>
+                          description={'This app can help you with your daily routine.'}
+                          link={'https://github.com/borisovya/toDoList'}
+                    />
                     <Work style={socialNetwork}
                           title={'Social network'}
-                          description={'Punch social network. This is a social network example.'}/>
+                          description={'Punch social network. This is a social network example.'}
+                          link={'https://github.com/borisovya/social-network'}
+                    />
                     <Work style={simpleComponents}
                           title={'Cards'}
-                          description={'Here you can learn something using cards.'}/>
+                          description={'Here you can learn something using cards.'}
+                          link={'https://github.com/borisovya/incubator-friday'}
+                    />
 
                 </div>
             </div>
