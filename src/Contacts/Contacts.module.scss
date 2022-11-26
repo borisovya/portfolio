@@ -27,8 +27,6 @@
             .textField {
                 min-width: 70%;
             }
-            //border: 1px solid;
-            //border-radius: 5px;
             min-height: 70%;
             width: 70%;
             display: flex;
@@ -39,7 +37,6 @@
             box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px $blocksBackgroundColor;
             margin-bottom: 40px;
             .button {
-                //@extend .btn;
                 width: 40%;
                 background-color: $primaryTextColor;
                 color: black;

@@ -4,9 +4,10 @@ import styleContainer from "../Common/Styles/Container.module.scss";
 import {useForm} from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import {styled} from '@mui/material/styles'
-import Button from "../Common/Components/Button/Button";
 import Title from "../Common/Components/Title/Title";
 import Fade from 'react-reveal/Slide';
+import * as emailjs from "@emailjs/browser";
+
 
 
 function Contacts() {
@@ -35,8 +36,24 @@ const CustomTextField = styled(TextField)({
 });
 
 const ContactForm = () => {
-    const {register, handleSubmit} = useForm();
-    const onSubmit = data => console.log(data);
+    const {register, handleSubmit, reset} = useForm();
+
+    const onSubmit = (data) => {
+        console.log(data)
+        const templateParams = {
+            contact_number: data.number,
+            from_name: data.email,
+            message: data.message
+        };
+        emailjs.send('contact_form', 'template_nw74xye', templateParams, 'eKYeukvQGOWd98rgJ')
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+        reset()
+    }
+
 
     return (
         <Fade bottom>
@@ -49,8 +66,8 @@ const ContactForm = () => {
                                  multiline
                                  rows={4}
                                  variant="standard"
-                                 {...register("number")} />
-                <Button text={'Send message'} type="submit" value='Send'/>
+                                 {...register("message")} />
+                <input className={s.button} type="submit" value={'Send message'}/>
             </form>
         </Fade>
     );
