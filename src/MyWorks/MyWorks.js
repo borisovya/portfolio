@@ -34,7 +34,7 @@ function MyWorks() {
                     <Work style={todoList}
                           title={'ToDo List'}
                           description={'This app can help you with your daily routine.'}
-                          link={'https://github.com/borisovya/toDoList'}
+                          link={'https://github.com/borisovya/todo16v2'}
                     />
                     <Work style={socialNetwork}
                           title={'Social network'}

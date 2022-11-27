@@ -25,19 +25,23 @@
       }
     }
   ;
-
     .name {
       font-weight: 600;
       @include text($descriptionText, 40px, 1.2);
       color: $accentColor;
+      @media (max-width: 620px) {
+        font-size: 26px;
+      }
     }
   ;
-
     .profession {
       margin-top: 20px;
       font-weight: 600;
       @include text($descriptionText, 40px, 1.2);
-      color: #ffffff;;
+      color: #ffffff;
+      @media (max-width: 620px) {
+        font-size: 26px;
+      }
     }
   }
 ;
