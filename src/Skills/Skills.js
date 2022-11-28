@@ -41,12 +41,12 @@ function Skills() {
             <div className={`${styleContainer.container} ${s.skillsContainer}`}>
                 <Title text={'Skills'}/>
                 <div className={s.skills}>
-                    <Skill iconStyle={jsStyle} title={'JS'} description={'Some information regarding JS skills...'} />
-                    <Skill iconStyle={htmlStyle} title={'HTML' } description={'Some information regarding HTML skills...'} />
-                    <Skill iconStyle={cssStyle} title={'CSS'} description={'Some information regarding CSS skills...'} />
-                    <Skill iconStyle={reactStyle} title={'React'} description={'Some information regarding CSS skills...'} />
-                    <Skill iconStyle={reactReduxStyle} title={'React-Redux'} description={'Some information regarding CSS skills...'} />
-                    <Skill iconStyle={typeScriptStyle} title={'TypeScript'} description={'Some information regarding CSS skills...'} />
+                    <Skill iconStyle={jsStyle} title={'JS'} description={''} />
+                    <Skill iconStyle={htmlStyle} title={'HTML' } description={''} />
+                    <Skill iconStyle={cssStyle} title={'CSS'} description={''} />
+                    <Skill iconStyle={reactStyle} title={'React'} description={''} />
+                    <Skill iconStyle={reactReduxStyle} title={'React-Redux'} description={''} />
+                    <Skill iconStyle={typeScriptStyle} title={'TypeScript'} description={''} />
                 </div>
             </div>
         </div>

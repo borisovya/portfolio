@@ -7,6 +7,7 @@ import {styled} from '@mui/material/styles'
 import Title from "../Common/Components/Title/Title";
 import Fade from 'react-reveal/Slide';
 import * as emailjs from "@emailjs/browser";
+import {Box, Modal, Typography} from "@mui/material";
 
 
 
@@ -36,22 +37,52 @@ const CustomTextField = styled(TextField)({
 });
 
 const ContactForm = () => {
-    const {register, handleSubmit, reset} = useForm();
+    const [open, setOpen] = React.useState(false);
+    const [isDisabled, setIsDisabled] = React.useState(false);
 
-    const onSubmit = (data) => {
-        console.log(data)
+
+    const {register, handleSubmit, reset, trigger, formState:{errors, isValid},} = useForm();
+
+    const triger = () => {
+        trigger("email")
+    }
+    const triger2 = () => {
+        trigger("message")
+    }
+
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+    };
+
+    const onSubmit = async (data) => {
         const templateParams = {
             contact_number: data.number,
             from_name: data.email,
             message: data.message
         };
-        emailjs.send('contact_form', 'template_nw74xye', templateParams, 'eKYeukvQGOWd98rgJ')
-            .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-                console.log('FAILED...', error);
-            });
-        reset()
+        try {
+            setIsDisabled(true)
+            const response = await emailjs.send('contact_form', 'template_nw74xye', templateParams, 'eKYeukvQGOWd98rgJ')
+            handleOpen()
+
+        } catch (error) {
+            console.log('FAILED...', error);
+        }
+        finally {
+            setIsDisabled(false)
+            reset()
+        }
     }
 
 
@@ -59,16 +90,49 @@ const ContactForm = () => {
         <Fade bottom>
             <form id='contacts' className={s.form} onSubmit={handleSubmit(onSubmit)}>
 
-                <CustomTextField className={s.textField} label="Email" variant="standard" {...register("email")} />
+                <CustomTextField className={s.textField} label="Email" variant="standard" {...register("email", {
+                    required: 'Required',
+                    onBlur: triger,
+                    minLength: {
+                    value: 1,
+                    message: ' Email is required'
+                },
+                    maxLength: {
+                    value: 35,
+                    message: ` Max email length is 35 symbols`}}
+                )} />
+                <span className={s.errorText}>{errors?.email && <span>{errors?.email?.message || 'Error'}</span>}</span>
                 <CustomTextField className={s.textField} label="Number" variant="standard" {...register("number")} />
                 <CustomTextField className={s.textField}
                                  label="Your message"
                                  multiline
                                  rows={4}
                                  variant="standard"
-                                 {...register("message")} />
-                <input className={s.button} type="submit" value={'Send message'}/>
+                                 {...register("message", {
+                                     required: 'Required',
+                                     onBlur: triger2,
+                                     minLength: {
+                                         value: 1,
+                                         message: ' Message is required'
+                                     },
+                                     maxLength: {
+                                         value: 300,
+                                         message: ` Max email length is 300 symbols`}}
+                                 )} />
+                <span className={s.errorText}>{errors?.message && <span>{errors?.message?.message || 'Error'}</span>}</span>
+                <input disabled={isDisabled} className={isDisabled ? s.btnDisabled: s.button} type="submit" value={'Send message'}/>
             </form>
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description">
+                <Box sx={style}>
+                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                        Your message has been sent. Thank you!
+                    </Typography>
+                </Box>
+            </Modal>
         </Fade>
     );
 }

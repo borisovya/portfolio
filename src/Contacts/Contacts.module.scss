@@ -25,6 +25,7 @@
                 color: $primaryTextColor;
             }
             .textField {
+                margin-top: 20px;
                 min-width: 70%;
             }
             min-height: 70%;
@@ -36,16 +37,30 @@
             background-color: $blocksBackgroundColor;
             box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px $blocksBackgroundColor;
             margin-bottom: 40px;
+            .errorText {
+                color: red;
+                font-size: 12px;
+            }
+            .btnDisabled{
+                width: 40%;
+                background-color: $primaryTextColor;
+                color: black;
+                border-radius: 15px;
+                padding: 10px 40px;
+                opacity: 0.3;
+            }
             .button {
                 width: 40%;
                 background-color: $primaryTextColor;
                 color: black;
                 border-radius: 15px;
                 padding: 10px 40px;
+                margin-bottom: 20px;
                 &:hover {
                     background-color: $accentColor;
                     color: $primaryTextColor
                 }
+
             @media screen and (max-width: 400px) {
                     width: 100%
             }
