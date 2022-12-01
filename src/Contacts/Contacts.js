@@ -8,6 +8,7 @@ import Title from "../Common/Components/Title/Title";
 import Fade from 'react-reveal/Slide';
 import * as emailjs from "@emailjs/browser";
 import {Box, Modal, Typography} from "@mui/material";
+import Button from "../Common/Components/Button/Button";
 
 
 
