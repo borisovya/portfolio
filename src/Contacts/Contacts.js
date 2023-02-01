@@ -9,7 +9,7 @@ import Fade from 'react-reveal/Slide';
 import * as emailjs from "@emailjs/browser";
 import {Box, Modal, Typography} from "@mui/material";
 import Button from "../Common/Components/Button/Button";
-
+import axios from 'axios'
 
 
 function Contacts() {
@@ -42,7 +42,7 @@ const ContactForm = () => {
     const [isDisabled, setIsDisabled] = React.useState(false);
 
 
-    const {register, handleSubmit, reset, trigger, formState:{errors, isValid},} = useForm();
+    const {register, handleSubmit, reset, trigger, formState: {errors, isValid},} = useForm();
 
     const triger = () => {
         trigger("email")
@@ -74,13 +74,13 @@ const ContactForm = () => {
         };
         try {
             setIsDisabled(true)
-            const response = await emailjs.send('contact_form', 'template_nw74xye', templateParams, 'eKYeukvQGOWd98rgJ')
+            // const response = await emailjs.send('contact_form', 'template_nw74xye', templateParams, 'eKYeukvQGOWd98rgJ')
+            const res = await axios.post('http://localhost:3010/s', {number: data.number, email: data.email, message: data.message})
             handleOpen()
 
         } catch (error) {
             console.log('FAILED...', error);
-        }
-        finally {
+        } finally {
             setIsDisabled(false)
             reset()
         }
@@ -92,15 +92,17 @@ const ContactForm = () => {
             <form id='contacts' className={s.form} onSubmit={handleSubmit(onSubmit)}>
 
                 <CustomTextField className={s.textField} label="Email" variant="standard" {...register("email", {
-                    required: 'Required',
-                    onBlur: triger,
-                    minLength: {
-                    value: 1,
-                    message: ' Email is required'
-                },
-                    maxLength: {
-                    value: 35,
-                    message: ` Max email length is 35 symbols`}}
+                        required: 'Required',
+                        onBlur: triger,
+                        minLength: {
+                            value: 1,
+                            message: ' Email is required'
+                        },
+                        maxLength: {
+                            value: 35,
+                            message: ` Max email length is 35 symbols`
+                        }
+                    }
                 )} />
                 <span className={s.errorText}>{errors?.email && <span>{errors?.email?.message || 'Error'}</span>}</span>
                 <CustomTextField className={s.textField} label="Number" variant="standard" {...register("number")} />
@@ -110,18 +112,22 @@ const ContactForm = () => {
                                  rows={4}
                                  variant="standard"
                                  {...register("message", {
-                                     required: 'Required',
-                                     onBlur: triger2,
-                                     minLength: {
-                                         value: 1,
-                                         message: ' Message is required'
-                                     },
-                                     maxLength: {
-                                         value: 300,
-                                         message: ` Max email length is 300 symbols`}}
+                                         required: 'Required',
+                                         onBlur: triger2,
+                                         minLength: {
+                                             value: 1,
+                                             message: ' Message is required'
+                                         },
+                                         maxLength: {
+                                             value: 300,
+                                             message: ` Max email length is 300 symbols`
+                                         }
+                                     }
                                  )} />
-                <span className={s.errorText}>{errors?.message && <span>{errors?.message?.message || 'Error'}</span>}</span>
-                <input disabled={isDisabled} className={isDisabled ? s.btnDisabled: s.button} type="submit" value={'Send message'}/>
+                <span className={s.errorText}>{errors?.message &&
+                    <span>{errors?.message?.message || 'Error'}</span>}</span>
+                <input disabled={isDisabled} className={isDisabled ? s.btnDisabled : s.button} type="submit"
+                       value={'Send message'}/>
             </form>
             <Modal
                 open={open}
