@@ -6,9 +6,7 @@ import TextField from "@mui/material/TextField";
 import {styled} from '@mui/material/styles'
 import Title from "../Common/Components/Title/Title";
 import Fade from 'react-reveal/Slide';
-import * as emailjs from "@emailjs/browser";
 import {Box, Modal, Typography} from "@mui/material";
-import Button from "../Common/Components/Button/Button";
 import axios from 'axios'
 
 
@@ -75,7 +73,10 @@ const ContactForm = () => {
         try {
             setIsDisabled(true)
             // const response = await emailjs.send('contact_form', 'template_nw74xye', templateParams, 'eKYeukvQGOWd98rgJ')
-            const res = await axios.post('http://localhost:3010/s', {number: data.number, email: data.email, message: data.message})
+            // const res = await axios.post('https://smtp-server-nodejs.vercel.app/s', {number: data.number, email: data.email, message: data.message})
+            const res = await axios.get('https://smtp-server-nodejs.vercel.app', {
+                params: {number: data.number, email: data.email, message: data.message}
+            })
             handleOpen()
 
         } catch (error) {
